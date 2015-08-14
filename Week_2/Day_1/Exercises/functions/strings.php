@@ -14,6 +14,9 @@
             $sentence = "this exercise reminds me of my brother's facebook posts";
 
             // code goes here
+            function toUpper($words){
+                
+            }
 
 
         ?>

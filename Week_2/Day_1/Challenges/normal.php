@@ -10,16 +10,26 @@
 
 
  -->
-
+ <?php
+ 	function timeLapse($month){
+ 		return time()+$month*30*24*60*60;
+ 	}
+  ?>
 <!DOCTYPE html>
 <html>
 <head></head>
 <body>
 <p>
 	<?php
-
-		// code goes here ...
-
+	     // code goes here ...
+		//echo date(F, 12);
+	for($i = -7; $i<= 4; $i++){
+		$m = date(F, timeLapse($i));
+		if(substr($m,0,1) == "J"){
+			echo $i+8 . " - " .$m." - ".strlen($m) . "<br />";
+		}
+		
+	}
 
 	?>
 </p>

@@ -16,6 +16,39 @@
     array('name' => 'Package 6', 'price' => 10.99),
     array('name' => 'Package 7', 'price' => 11.00),
   );
+  
+  $priceArray = array();
+  foreach($packagesArray as $k => $p){
+    $priceArray[] = $packagesArray[$k]["price"];
+  }
+  sort($priceArray);
+  
+  $notInOrder = true;
+  
+  while($notInOrder){
+    $count = 0;
+    
+    for($i = 0; $i< count($packagesArray)-1; $i++){
+      
+      if($packagesArray[$i]["price"] > $packagesArray[$i+1]["price"]){
+        $temp = $packagesArray[$i];
+        $packagesArray[$i] = $packagesArray[$i+1];
+        $packagesArray[$i+1] = $temp;
+      }
+    }
+    
+    foreach($packagesArray as $key => $items){
+      
+      if($packagesArray[$key]["price"] == $priceArray[$key]){
+        $count++;
+      }
+    }
+    
+    if($count == count($packagesArray)){
+      $notInOrder = false;
+    }
+  }
+  
 ?>
 <!DOCTYPE html>
 <html>

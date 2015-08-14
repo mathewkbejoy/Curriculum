@@ -7,6 +7,9 @@
           <?php
           	// From within the PHP tags put your first and last name 
             // in variables and use concatination to render your full name
+            $fname = "Bejoy";
+            $lname = "Mathew";
+            echo $fname." ".$lname;
           ?>
         </p>
 	</body>

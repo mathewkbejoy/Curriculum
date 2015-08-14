@@ -12,7 +12,7 @@
         */
        
         $arrayVar = array('1','2','3');
-        $arrayVar2 = ['1','2','3']; // shorthand
+        $arrayVar2 = [1,2,3]; // shorthand
 
         var_dump($arrayVar);
 
